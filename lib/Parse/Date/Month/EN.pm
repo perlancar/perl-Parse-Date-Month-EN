@@ -92,7 +92,7 @@ sub parse_date_month_en {
     my $text = $args{text};
 
     $text =~ s/^\s+//s;
-    return undef unless length($text);
+    return undef unless length($text); ## no critic: Subroutines::ProhibitExplicitReturnUndef
 
     $month_values{lc $text};
 }
